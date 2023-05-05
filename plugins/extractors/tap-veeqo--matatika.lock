@@ -1,0 +1,32 @@
+{
+  "plugin_type": "extractors",
+  "name": "tap-veeqo",
+  "namespace": "tap_veeqo",
+  "variant": "matatika",
+  "label": "Veeqo",
+  "docs": "https://hub.meltano.com/extractors/tap-veeqo--matatika",
+  "repo": "https://github.com/Matatika/tap-veeqo",
+  "pip_url": "git+https://github.com/Matatika/tap-veeqo.git@v0.1.0",
+  "description": "Multi-Channel Inventory and Shipping Platform for Ecommerce",
+  "logo_url": "https://hub.meltano.com/assets/logos/extractors/veeqo.png",
+  "capabilities": [
+    "catalog",
+    "discover",
+    "state",
+    "about",
+    "stream-maps"
+  ],
+  "settings_group_validation": [
+    [
+      "api_key"
+    ]
+  ],
+  "settings": [
+    {
+      "name": "api_key",
+      "kind": "password",
+      "label": "API key",
+      "description": "The user API key.\n\nSee [Generating your API keys](https://developer.veeqo.com/docs#/introduction/authentication/generating-your-api-keys) for more information."
+    }
+  ]
+}

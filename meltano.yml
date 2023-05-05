@@ -1,0 +1,38 @@
+version: 1
+default_environment: dev
+project_id: 385522b2-ab4a-48e8-9562-af99f7c3c6ae
+environments:
+- name: dev
+- name: staging
+- name: prod
+plugins:
+  extractors:
+  - name: tap-veeqo
+    variant: matatika
+    pip_url: git+https://github.com/Matatika/tap-veeqo.git@v0.1.0
+  loaders:
+  - name: target-postgres
+    variant: transferwise
+    pip_url: pipelinewise-target-postgres
+  utilities:
+  - name: matatika
+    variant: matatika
+    pip_url: git+https://github.com/Matatika/matatika-ext.git@v0.5.0
+  - name: notebook
+    variant: matatika
+    pip_url: git+https://github.com/Matatika/utility-notebook.git
+jobs:
+- name: report-job
+  tasks:
+  - notebook:run
+- name: veeqo-job
+  tasks:
+  - tap-veeqo
+  - target-postgres
+schedules:
+- name: Veeqo Pipeline
+  interval: 0 0 * * * *
+  job: veeqo-job
+- name: Report Pipeline
+  interval: 0 0 8 * * *
+  job: report-job
