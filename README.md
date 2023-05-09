@@ -2,6 +2,8 @@
 
 This is a very simple to use example project that contains Matatika's tap-veeqo, but also contains a demo of how to run Jupyter Notebooks in a Meltano project, including how to schedule them using the Matatika Ext plugin.
 
+The "output" file in this example is a `.html` file, as this can be created and viewed on any system. To go further and convert to `.pdf` please see the below prerequisites section.
+
 ---
 
 ## Prerequisites
@@ -9,7 +11,12 @@ This is a very simple to use example project that contains Matatika's tap-veeqo,
 **NB - Currently this project is only supported to work on Linux and MacOS**
 
 1. Get Docker - [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/)
-1. `wkhtmltopdf` installed on your system - [wkhtmltopdf Downloads Page](https://wkhtmltopdf.org/downloads.html)
+
+### Optional
+
+To convert a Notebook to PDF you are likely going to need some additional packages installed on your system. To use the Notebook plugins pdf conversion funcationailiy you will need at least:
+- pandoc - [Installing Pandoc](https://pandoc.org/installing.html)
+- texlive-xetex
 
 ---
 
@@ -31,7 +38,7 @@ This is a very simple to use example project that contains Matatika's tap-veeqo,
 
 1. Run the `Report Pipeline` by clicking the Play button.
 
-1. Once the `Report Pipeline` has finished running, open your Meltano project on your local system, open the `output` dir. Here you should see an `report.pdf` which is the output from the pipeline being run.
+1. Once the `Report Pipeline` has finished running, open your Meltano project on your local system, open the `output` dir. Here you should see an `report.html` which is the output from the pipeline being run. You can view this file with any web browser.
 
 Congratulations, you have now have a Notebook that executes on a scheudle in Meltano, using the Matatika lab.
 
