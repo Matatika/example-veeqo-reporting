@@ -21,6 +21,8 @@ plugins:
   - name: notebook
     variant: matatika
     pip_url: git+https://github.com/Matatika/utility-notebook.git
+    config:
+      path: notebook/report.ipynb
 jobs:
 - name: report-job
   tasks:
