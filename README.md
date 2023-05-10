@@ -32,11 +32,7 @@ To convert a Notebook to PDF you are likely going to need some additional packag
 
 1. Your web browser automatically opens [https://localhost:3443](https://localhost:3443)
 
-1. You will now see the tasks screen. You can optionally set up your Veeqo pipeline by:
-   - Clicking `LET'S GO` for the "Complete pipeline configuration" task OR:
-   - Click `Go To Lab`, then the Pipelines page. Here you should see a pipeline called `Report Pipeline`
-
-1. Run the `Report Pipeline` by clicking the Play button.
+1. You will now see the Pipelines screen. Run the `Report Pipeline` by clicking the Play button.
 
 1. Once the `Report Pipeline` has finished running, open your Meltano project on your local system, open the `output` dir. Here you should see an `report.html` which is the output from the pipeline being run. You can view this file with any web browser.
 
