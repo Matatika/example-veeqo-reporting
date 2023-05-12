@@ -14,7 +14,7 @@ The "output" file in this example is a `.html` file, as this can be created and 
 
 ### Optional
 
-To convert a Notebook to PDF you are likely going to need some additional packages installed on your system. To use the Notebook plugins pdf conversion funcationailiy you will need at least:
+To convert a Notebook to PDF you are likely going to need some additional packages installed on your system. To use the Notebook plugins pdf conversion functionality you will need at least:
 - pandoc - [Installing Pandoc](https://pandoc.org/installing.html)
 - texlive-xetex
 
@@ -36,7 +36,7 @@ To convert a Notebook to PDF you are likely going to need some additional packag
 
 1. Once the `Report Pipeline` has finished running, open your Meltano project on your local system, open the `output` dir. Here you should see an `report.html` which is the output from the pipeline being run. You can view this file with any web browser.
 
-Congratulations, you have now have a Notebook that executes on a scheudle in Meltano, using the Matatika lab.
+Congratulations, you have now have a Notebook that executes on a schedule in Meltano, using the Matatika lab.
 
 ---
 
