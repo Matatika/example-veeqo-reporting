@@ -35,6 +35,6 @@ schedules:
 - name: Veeqo Pipeline
   interval: 0 0 * * * *
   job: veeqo-job
-- name: Report Pipeline
+- name: My report pipeline
   interval: 0 0 8 * * *
   job: report-job
