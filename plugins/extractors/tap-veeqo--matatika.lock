@@ -24,7 +24,8 @@
   "settings": [
     {
       "name": "api_key",
-      "kind": "password",
+      "kind": "string",
+      "sensitive": true,
       "label": "API key",
       "description": "The user API key.\n\nSee [Generating your API keys](https://developer.veeqo.com/docs#/introduction/authentication/generating-your-api-keys) for more information."
     }
